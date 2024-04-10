@@ -57,7 +57,7 @@ const SideBar = ({ children, songs }: SideBarProps) => {
           <Library songs={songs} />
         </Box>
       </div>
-      <main className=" h-full flex-1 overflow-y-auto p-2 sm:px-0 sm:py-2">
+      <main className=" h-full flex-1 overflow-y-auto p-2 sm:px-0 sm:pr-2 sm:py-2">
         {children}
       </main>
     </div>
