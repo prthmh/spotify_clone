@@ -11,6 +11,7 @@ import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { useEffect } from "react";
 
 import Modal from "./Modal";
+import Button from "./Button";
 
 const AuthModal = () => {
   const { session } = useSessionContext();
