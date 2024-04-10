@@ -7,12 +7,14 @@ import { HiHome } from "react-icons/hi";
 import Box from "./Box";
 import SideBarItem from "./SideBarItem";
 import Library from "./Library";
+import { Song } from "@/types";
 
 interface SideBarProps {
   children: React.ReactNode;
+  songs: Song[];
 }
 
-const SideBar = ({ children }: SideBarProps) => {
+const SideBar = ({ children, songs }: SideBarProps) => {
   const pathname = usePathname();
 
   const routes = useMemo(
@@ -52,7 +54,7 @@ const SideBar = ({ children }: SideBarProps) => {
           </div>
         </Box>
         <Box className=" overflow-y-auto h-full">
-          <Library />
+          <Library songs={songs} />
         </Box>
       </div>
       <main className=" h-full flex-1 overflow-y-auto p-2 sm:px-0 sm:py-2">
