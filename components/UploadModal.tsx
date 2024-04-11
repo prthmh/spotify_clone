@@ -13,6 +13,7 @@ import { useUser } from "@/hooks/useUser";
 import Modal from "./Modal";
 import Input from "./Input";
 import Button from "./Button";
+import { BarLoader } from "react-spinners";
 
 const UploadModal = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -115,10 +116,8 @@ const UploadModal = () => {
         onChange={onChange}
       >
         {isLoading && (
-          <div className=" w-full flex justify-center">
-            <div className="bg-white px-2 py-1 font-semibold text-xl text-black w-fit rounded-lg mb-2">
-              Loading...
-            </div>
+          <div className=" w-full flex justify-center my-4">
+            <BarLoader color="#22c55e" />
           </div>
         )}
         <form
