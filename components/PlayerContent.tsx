@@ -22,7 +22,7 @@ interface PlayerContentProps {
 const PlayerContent = ({ song, songURL }: PlayerContentProps) => {
   const player = usePlayer();
   const [volume, setVolume] = useState(1);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   const howlerRef = useRef<ReactHowler>(null);
   const [progress, setProgress] = useState(0);
 
